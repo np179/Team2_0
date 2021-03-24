@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 def read_in_np(filedir, filename):
     ''' Reads in a .csv-type File to a Dataframe
@@ -40,10 +41,18 @@ def do_dft_real(data, tmax):
     return(signal ,freq)
 
 def plot_and_save_function(time , data):
+    '''Plots a given dataframes with time on the x-axis and data on the y-axis and saves it
+    data: array with the same length as the time array
+    time: array with same lenght as the data array
+    '''
     plt.plot( time , data ) #plot freq gegn signal
     plt.savefig('Plot.pdf') #speichern
 
 def drop_column(data , n ):
+    '''Selects a certain column of an array and stores the column in a vector
+    data: array with data
+    n: number of the column which should be stored in a vector
+    '''
     df = data[n]
     print(df)
 
@@ -54,12 +63,13 @@ def make_complex(data):
     print(comp_fct)
 
 def rechne_autofct(data):
-    autofct = np.zeros(len(data[0]), dtype = complex) #leere (null) matrix mit länge von komplexer
+    '''calculates the '''
+    autofct = np.zeros(len(data[0]), dtype = complex) #leere (null) matrix mit laenge von komplexer
     for i in range(0,len(data[0])):
         autofct[i] = np.sum(data[:,0]*np.conjugate(data[:,i])) #funktion von oben
     return autofct
 
-def do_dft(data , time)
+def do_dft(data , time):
     data_dft = np.fft.fft(data)
     time_dft = np.fft.fftfreq(len(time))
     return(data_dft , time_dft )
