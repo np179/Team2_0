@@ -1,0 +1,6 @@
+{
+  "test_sort_pyttest.py::test_sort[True-True0]": true,
+  "test_sort_pyttest.py::test_sort[True-True1]": true,
+  "test_sort_pyttest.py::test_sort[myval0-result0]": true,
+  "test_sort_pyttest.py::test_sort[myval1-result1]": true
+}
