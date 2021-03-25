@@ -7,28 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>statistical module &#8212; LCpackage 1.0 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="numerical module" href="numerical.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="prev" title="numerical module" href="numerical.html" /> 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="numerical.html" title="numerical module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">LCpackage 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">LCpackage</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">statistical module</a></li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="module-statistical">
@@ -37,11 +47,18 @@
 <dt id="statistical.correlation">
 <code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">correlation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reduce</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.correlation" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Get correlation matrix for a given Dataframe using Pearsons r.]</p>
-<dl>
-<dt>Args:</dt><dd><p>df ([Dataframe]): [DataFrame containing data to be correlated.]</p>
-<p>reduce ([Boolean]): [If True, lower triangular and diagonal values will be set to 0.]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>[</em><em>Dataframe</em><em>]</em>) – [DataFrame containing data to be correlated.]</p></li>
+<li><p><strong>reduce</strong> (<em>[</em><em>Boolean</em><em>]</em>) – [If True, lower triangular and diagonal values will be set to 0.]</p></li>
+</ul>
 </dd>
-<dt>Returns:</dt><dd><p>[DataFrame]: [DataFrame representing the correlation matrix.]</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[DataFrame representing the correlation matrix.]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[DataFrame]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -50,11 +67,18 @@
 <dt id="statistical.del_below">
 <code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">del_below</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshhold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.del_below" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Takes a dataframe and checks the variance of the columns against a given threshhold, deletes IN PLACE if variance falls below threshhold.]</p>
-<dl>
-<dt>Args:</dt><dd><p>df ([DataFrame]): [DataFrame to be checked.]</p>
-<p>threshhold ([Integer or Float]): [Sets threshhold to check variance against.]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [DataFrame to be checked.]</p></li>
+<li><p><strong>threshhold</strong> (<em>[</em><em>Integer</em><em> or </em><em>Float</em><em>]</em>) – [Sets threshhold to check variance against.]</p></li>
+</ul>
 </dd>
-<dt>Returns:</dt><dd><p>[DataFrame]: [DataFrame without the columns with variance below threshhold.]</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[DataFrame without the columns with variance below threshhold.]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[DataFrame]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -63,12 +87,15 @@
 <dt id="statistical.plot_and_save_multiple">
 <code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">plot_and_save_multiple</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.plot_and_save_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Plot multiple columns of a DataFrame as lines against one specified column and save the plot in a designated location.]</p>
-<dl>
-<dt>Args:</dt><dd><p>df ([DataFrame]): [Input DataFrame.]</p>
-<p>xaxis ([String or Index]): [Designates Column of variable to plot against.]</p>
-<p>var_name ([String]): [Describes the Columns plotted.]</p>
-<p>value_name ([String]): [Description of the y-axis.]</p>
-<p>path ([String]): [Designates location to save plot to.]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [Input DataFrame.]</p></li>
+<li><p><strong>xaxis</strong> (<em>[</em><em>String</em><em> or </em><em>Index</em><em>]</em>) – [Designates Column of variable to plot against.]</p></li>
+<li><p><strong>var_name</strong> (<em>[</em><em>String</em><em>]</em>) – [Describes the Columns plotted.]</p></li>
+<li><p><strong>value_name</strong> (<em>[</em><em>String</em><em>]</em>) – [Description of the y-axis.]</p></li>
+<li><p><strong>path</strong> (<em>[</em><em>String</em><em>]</em>) – [Designates location to save plot to.]</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -77,11 +104,14 @@
 <dt id="statistical.plot_and_save_single">
 <code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">plot_and_save_single</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.plot_and_save_single" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Plot a single column of a DataFrame as lines against one specified column and save the plot in a designated location.]</p>
-<dl>
-<dt>Args:</dt><dd><p>df ([DataFrame]): [Input DataFrame.]</p>
-<p>xaxis ([String or Index]): [Designates column to plot against.]</p>
-<p>yaxis ([String or Index]): [Designates column to plot.]</p>
-<p>path ([String]): [Designates location to save plot to.]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [Input DataFrame.]</p></li>
+<li><p><strong>xaxis</strong> (<em>[</em><em>String</em><em> or </em><em>Index</em><em>]</em>) – [Designates column to plot against.]</p></li>
+<li><p><strong>yaxis</strong> (<em>[</em><em>String</em><em> or </em><em>Index</em><em>]</em>) – [Designates column to plot.]</p></li>
+<li><p><strong>path</strong> (<em>[</em><em>String</em><em>]</em>) – [Designates location to save plot to.]</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -90,11 +120,18 @@
 <dt id="statistical.read_in_df">
 <code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">read_in_df</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filedir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.read_in_df" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Read a .csv-type File to a DataFrame.]</p>
-<dl>
-<dt>Args:</dt><dd><p>filedir ([String]): [Name of directory in which data is located.]</p>
-<p>filename ([String]): [Name of file which contains data.]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filedir</strong> (<em>[</em><em>String</em><em>]</em>) – [Name of directory in which data is located.]</p></li>
+<li><p><strong>filename</strong> (<em>[</em><em>String</em><em>]</em>) – [Name of file which contains data.]</p></li>
+</ul>
 </dd>
-<dt>Returns:</dt><dd><p>[DataFrame]: [DataFrame with data from .csv indicated through input.]</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[DataFrame with data from .csv indicated through input.]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[DataFrame]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -103,11 +140,14 @@
 <dt id="statistical.safe_values">
 <code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">safe_values</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.safe_values" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Extract values from correlation matrix, and save sorted or unsorted to .txt-file.]</p>
-<dl>
-<dt>Args:</dt><dd><p>df ([DataFrame]): [Correlation Matrix.]</p>
-<p>exclude ([String]): [Variable whos correlation is to be excluded.]</p>
-<p>sort ([Boolean]): [Set to true for values to be sorted along a certain axis.]</p>
-<p>path ([String]): [Designates location to save data to.]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [Correlation Matrix.]</p></li>
+<li><p><strong>exclude</strong> (<em>[</em><em>String</em><em>]</em>) – [Variable whos correlation is to be excluded.]</p></li>
+<li><p><strong>sort</strong> (<em>[</em><em>Boolean</em><em>]</em>) – [Set to true for values to be sorted along a certain axis.]</p></li>
+<li><p><strong>path</strong> (<em>[</em><em>String</em><em>]</em>) – [Designates location to save data to.]</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -115,42 +155,22 @@
 </div>
 
 
+            <div class="clearer"></div>
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">LCpackage</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">LCpackage</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="numerical.html">numerical module</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">statistical module</a></li>
-</ul>
-</li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="modules.html">LCpackage</a><ul>
-      <li>Previous: <a href="numerical.html" title="previous chapter">numerical module</a></li>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="numerical.html"
+                        title="previous chapter">numerical module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/statistical.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
@@ -161,32 +181,30 @@
     </div>
 </div>
 <script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2021, Lisamaria Wallner, Christian Delavier.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/statistical.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="numerical.html" title="numerical module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">LCpackage 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >LCpackage</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">statistical module</a></li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Lisamaria Wallner, Christian Delavier.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.2.
+    </div>
   </body>
 </html>
