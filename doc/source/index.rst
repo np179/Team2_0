@@ -1,5 +1,5 @@
 .. LCpackage documentation master file, created by
-   sphinx-quickstart on Thu Mar 18 15:12:30 2021.
+   sphinx-quickstart on Thu Mar 18 14:46:16 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -11,6 +11,7 @@ Welcome to LCpackage's documentation!
    :caption: Contents:
 
    modules
+   
 
 Indices and tables
 ==================
