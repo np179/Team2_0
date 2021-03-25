@@ -1,0 +1,12 @@
+[
+  "test_sort.py::test_sort::test_sort",
+  "test_sort.py::test_sort::test_value",
+  "test_sort_pyttest.py::test_sort",
+  "test_sort_pyttest.py::test_sort[True-True0]",
+  "test_sort_pyttest.py::test_sort[True-True1]",
+  "test_sort_pyttest.py::test_sort[myval0-True]",
+  "test_sort_pyttest.py::test_sort[myval0-result0]",
+  "test_sort_pyttest.py::test_sort[myval1-True]",
+  "test_sort_pyttest.py::test_sort[myval1-result1]",
+  "test_sort_pyttest.py::test_sort[myval2-True]"
+]

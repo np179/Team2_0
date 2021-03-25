@@ -10,6 +10,7 @@ Welcome to LCpackage's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   README
    modules
 
 
