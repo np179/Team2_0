@@ -1,3 +1,5 @@
 [
-  "test/test_LCpackage.py::test_del_below[df_in0-df_out0]"
+  "test/test_LCpackage.py::test_del_below[df_in0-0.0001-df_out0]",
+  "test/test_LCpackage.py::test_del_below[df_in0-df_out0]",
+  "test/test_LCpackage.py::test_del_below[df_in1-2-df_out1]"
 ]

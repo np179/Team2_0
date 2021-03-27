@@ -47,6 +47,67 @@
             
   <div class="section" id="module-numerical">
 <span id="numerical-module"></span><h1>numerical module<a class="headerlink" href="#module-numerical" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="numerical.check_significant_np">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">check_significant_np</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.check_significant_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a coloum a given array is below a given threshhold and gives out a</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="numerical.do_dft">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">do_dft</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.do_dft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numerical.do_dft_real">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">do_dft_real</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.do_dft_real" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the direct fouriertransformation of a given data and
+the frequencies of a given time
+Args:</p>
+<p>data: a real-valued numpy array
+tmax: a numpy array which discribes the time, has to have same length as data file</p>
+<p>Returns:
+an array with direct fourier transformed data and an array containing the sample frequencies</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="numerical.drop_column">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">drop_column</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.drop_column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects a certain column of an array and stores the column in a vector
+data: array with data
+n: number of the column which should be stored in a vector</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="numerical.make_complex">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">make_complex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.make_complex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numerical.plot_and_save_function">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">plot_and_save_function</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.plot_and_save_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots a given dataframes with time on the x-axis and data on the y-axis and saves it
+data: array with the same length as the time array
+time: array with same lenght as the data array</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="numerical.read_in_np">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">read_in_np</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filedir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.read_in_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads in a .csv-type File to a Dataframe
+Args:
+filedir([String]): Directionary where the file is located
+filename([String]): File which contains Dataframe</p>
+<p>Returns:
+Dataframe: Data from file as a numpy array</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="numerical.rechne_autofct">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">rechne_autofct</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.rechne_autofct" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the</p>
+</dd></dl>
+
 </div>
 
 
