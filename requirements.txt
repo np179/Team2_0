@@ -4,3 +4,4 @@ matplotlib
 pandas
 pytest
 sphinx
+flake8
