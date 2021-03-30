@@ -85,11 +85,11 @@ def sort_values(array_in):
         [np.ndarray]: [Sorted array containing values of a correlation matrix.]
     """
     for i in range(1,len(array_in)):       #basic implementation of insertion sort slightly modified for the object 
-        key_item = float(array_in[i,2])
+        key_item = array_in[i,2]
         temp_0 = array_in[i,0]
         temp_1 = array_in[i,1]
         j = i-1                            
-        while j >= 0 and abs(float(array_in[j,2])) > abs(key_item): 
+        while j >= 0 and abs(float(array_in[j,2])) > abs(float(key_item)): 
             array_in[j+1]=array_in[j]
             j = j-1 
         array_in[j+1,0] = temp_0      
