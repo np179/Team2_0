@@ -1,6 +1,7 @@
 import numpy as np 
 from pathlib import Path
 import matplotlib.pyplot as plt
+import seaborn as sn 
 
 
 def read_in_df(filedir, filename):
