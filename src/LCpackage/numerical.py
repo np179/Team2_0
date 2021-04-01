@@ -34,7 +34,8 @@ def do_dft_real(data, tmax):
     tmax: a numpy array which discribes the time, has to have same length as data file
 
     Returns:
-    an array with direct fourier transformed data and an array containing the sample frequencies
+    an array with direct fourier transformed data and
+    an array containing the sample frequencies
 
     '''
     signal = np.fft.rfft(data)
@@ -67,7 +68,7 @@ def make_complex(data):
     real = data[0::2]
     imag = data[1::2]
     # zusammensetzen der beiden Teile
-    comp_fct = real + 1j*imag
+    comp_fct = real + 1j * imag
     print(comp_fct)
 
 
@@ -77,7 +78,7 @@ def rechne_autofct(data):
     autofct = np.zeros(len(data[0]), dtype=complex)
     for i in range(0, len(data[0])):
         # funktion von oben
-        autofct[i] = np.sum(data[:, 0]*np.conjugate(data[:, i]))
+        autofct[i] = np.sum(data[:, 0] * np.conjugate(data[:, i]))
     return autofct
 
 

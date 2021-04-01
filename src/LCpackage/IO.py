@@ -53,7 +53,8 @@ def plot_multiple(df, xaxis, var_name, value_name):
 
 
 def save_fig(path):
-    """[Check if a path exists already and ask for input before overwriting to save Plot to location.]
+    """[Check if a path exists already and ask for input
+    before overwriting to save Plot to location.]
 
     Args:
         path ([String]): [Path to be checked and written to.]

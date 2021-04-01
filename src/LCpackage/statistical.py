@@ -60,7 +60,7 @@ def reduced(corr_matrix):
                 df_temp.iloc[i, k] = 0
             else:
                 df_temp.iloc[i, k] = 1
-    corr_matrix_reduced = corr_matrix*df_temp
+    corr_matrix_reduced = corr_matrix * df_temp
     print(corr_matrix_reduced)
     return corr_matrix_reduced
 
@@ -83,7 +83,8 @@ def get_values(df, exclude):
             if df.index[i] != exclude:
                 if df.columns[k] != exclude:
                     if df.loc[df.index[i], df.columns[k]] != 0:
-                        list_of_entries.append([df.index[i], df.columns[k], df.iloc[i, k]])
+                        list_of_entries.append([df.index[i],
+                                                df.columns[k], df.iloc[i, k]])
                         # list containing what was correlated and related values
     array = np.array(list_of_entries)
     return array
@@ -104,18 +105,19 @@ def sort_values(array_in):
         key_item = array_in[i, 2]
         temp_0 = array_in[i, 0]
         temp_1 = array_in[i, 1]
-        j = i-1
+        j = i - 1
         while j >= 0 and abs(float(array_in[j, 2])) > abs(float(key_item)):
-            array_in[j+1] = array_in[j]
-            j = j-1
-        array_in[j+1, 0] = temp_0
-        array_in[j+1, 1] = temp_1
-        array_in[j+1, 2] = key_item
+            array_in[j + 1] = array_in[j]
+            j = j - 1
+        array_in[j + 1, 0] = temp_0
+        array_in[j + 1, 1] = temp_1
+        array_in[j + 1, 2] = key_item
     return array_in
 
 
 def get_columns(df, x, y):
-    """[Take two columns from a DataFrame and put them into a seperate DataFrame.]
+    """[Take two columns from a DataFrame and
+        put them into a seperate DataFrame.]
 
     Args:
         df ([DataFrame]): [DataFrame containing the columns to be extracted.]
@@ -133,10 +135,12 @@ def get_columns(df, x, y):
 
 
 def get_distance(vectors):
-    """[Calculate the euclidian distance between two vectors, represented as columns in a DataFrame.]
+    """[Calculate the euclidian distance between two vectors,
+        represented as columns in a DataFrame.]
 
     Args:
-        vectors ([DataFrame]): [DataFrame containing the two columns representing the vectors.]
+        vectors ([DataFrame]): [DataFrame containing the
+        two columns representing the vectors.]
 
     Returns:
         [Float]: [Euclidian distance of the vectors.]
@@ -146,6 +150,6 @@ def get_distance(vectors):
     # new vector through (summ_components**2)**(1/2)
     diff_summ = 0
     for i in range(len(vectors.index)):
-        diff_summ = diff_summ + (vectors.iloc[i, 0] - vectors.iloc[i, 1])**2
-    distance = (diff_summ)**(1/2)
+        diff_summ = diff_summ + (vectors.iloc[i, 0] - vectors.iloc[i, 1]) ** 2
+    distance = (diff_summ) ** (1 / 2)
     return distance
