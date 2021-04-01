@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def read_in_np(filedir, filename):
     ''' Reads in a .csv-type File to a Dataframe
 Args:
@@ -23,6 +24,7 @@ def check_significant_np(data, thresh):
     data_out = data[indices]
     return data_out, indices
 
+
 def do_dft_real(data, tmax):
     '''Calculates the direct fouriertransformation of a given data and
     the frequencies of a given time
@@ -35,20 +37,24 @@ def do_dft_real(data, tmax):
     an array with direct fourier transformed data and an array containing the sample frequencies
 
     '''
-    signal = np.fft.rfft(efield_y)
+    signal = np.fft.rfft(data)
     signal = signal.real
     freq = np.fft.rfftfreq(tmax)
-    return(signal ,freq)
+    return(signal, freq)
 
-def plot_and_save_function(time , data):
+
+def plot_and_save_function(time, data):
     '''Plots a given dataframes with time on the x-axis and data on the y-axis and saves it
     data: array with the same length as the time array
     time: array with same lenght as the data array
     '''
-    plt.plot( time , data ) #plot freq gegn signal
-    plt.savefig('Plot.pdf') #speichern
+    # plot freq gegn signal
+    plt.plot(time, data)
+    # speichern
+    plt.savefig('Plot.pdf')
 
-def drop_column(data , n ):
+
+def drop_column(data, n):
     '''Selects a certain column of an array and stores the column in a vector
     data: array with data
     n: number of the column which should be stored in a vector
@@ -56,20 +62,26 @@ def drop_column(data , n ):
     df = data[n]
     print(df)
 
+
 def make_complex(data):
-    real = fct[0::2]
-    imag = fct[1::2]
-    comp_fct = real + 1j*imag #zusammensetzen der beiden Teile
+    real = data[0::2]
+    imag = data[1::2]
+    # zusammensetzen der beiden Teile
+    comp_fct = real + 1j*imag
     print(comp_fct)
+
 
 def rechne_autofct(data):
     '''calculates the '''
-    autofct = np.zeros(len(data[0]), dtype = complex) #leere (null) matrix mit laenge von komplexer
-    for i in range(0,len(data[0])):
-        autofct[i] = np.sum(data[:,0]*np.conjugate(data[:,i])) #funktion von oben
+    # leere (null) matrix mit laenge von komplexer
+    autofct = np.zeros(len(data[0]), dtype=complex)
+    for i in range(0, len(data[0])):
+        # funktion von oben
+        autofct[i] = np.sum(data[:, 0]*np.conjugate(data[:, i]))
     return autofct
 
-def do_dft(data , time):
+
+def do_dft(data, time):
     data_dft = np.fft.fft(data)
     time_dft = np.fft.fftfreq(len(time))
-    return(data_dft , time_dft )
+    return(data_dft, time_dft)
