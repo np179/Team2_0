@@ -45,14 +45,11 @@
 <span id="statistical-module"></span><h1>statistical module<a class="headerlink" href="#module-statistical" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="statistical.correlation">
-<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">correlation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reduce</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.correlation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">correlation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.correlation" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Get correlation matrix for a given Dataframe using Pearsons r.]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> (<em>[</em><em>Dataframe</em><em>]</em>) – [DataFrame containing data to be correlated.]</p></li>
-<li><p><strong>reduce</strong> (<em>[</em><em>Boolean</em><em>]</em>) – [If True, lower triangular and diagonal values will be set to 0.]</p></li>
-</ul>
+<dd class="field-odd"><p><strong>df</strong> (<em>[</em><em>Dataframe</em><em>]</em>) – [DataFrame containing data to be correlated.]</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>[DataFrame representing the correlation matrix.]</p>
@@ -84,51 +81,73 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="statistical.plot_and_save_multiple">
-<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">plot_and_save_multiple</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.plot_and_save_multiple" title="Permalink to this definition">¶</a></dt>
-<dd><p>[Plot multiple columns of a DataFrame as lines against one specified column and save the plot in a designated location.]</p>
+<dt id="statistical.get_columns">
+<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">get_columns</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.get_columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Take two columns from a DataFrame and put them into a seperate DataFrame.]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [Input DataFrame.]</p></li>
-<li><p><strong>xaxis</strong> (<em>[</em><em>String</em><em> or </em><em>Index</em><em>]</em>) – [Designates Column of variable to plot against.]</p></li>
-<li><p><strong>var_name</strong> (<em>[</em><em>String</em><em>]</em>) – [Describes the Columns plotted.]</p></li>
-<li><p><strong>value_name</strong> (<em>[</em><em>String</em><em>]</em>) – [Description of the y-axis.]</p></li>
-<li><p><strong>path</strong> (<em>[</em><em>String</em><em>]</em>) – [Designates location to save plot to.]</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="statistical.plot_and_save_single">
-<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">plot_and_save_single</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaxis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.plot_and_save_single" title="Permalink to this definition">¶</a></dt>
-<dd><p>[Plot a single column of a DataFrame as lines against one specified column and save the plot in a designated location.]</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [Input DataFrame.]</p></li>
-<li><p><strong>xaxis</strong> (<em>[</em><em>String</em><em> or </em><em>Index</em><em>]</em>) – [Designates column to plot against.]</p></li>
-<li><p><strong>yaxis</strong> (<em>[</em><em>String</em><em> or </em><em>Index</em><em>]</em>) – [Designates column to plot.]</p></li>
-<li><p><strong>path</strong> (<em>[</em><em>String</em><em>]</em>) – [Designates location to save plot to.]</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="statistical.read_in_df">
-<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">read_in_df</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filedir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.read_in_df" title="Permalink to this definition">¶</a></dt>
-<dd><p>[Read a .csv-type File to a DataFrame.]</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filedir</strong> (<em>[</em><em>String</em><em>]</em>) – [Name of directory in which data is located.]</p></li>
-<li><p><strong>filename</strong> (<em>[</em><em>String</em><em>]</em>) – [Name of file which contains data.]</p></li>
+<li><p><strong>df</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [DataFrame containing the columns to be extracted.]</p></li>
+<li><p><strong>x</strong> (<em>[</em><em>String</em><em>]</em>) – [Designates 1st column to be extracted.]</p></li>
+<li><p><strong>y</strong> (<em>[</em><em>String</em><em>]</em>) – [Designated 2nd column to be extracted.]</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>[DataFrame with data from .csv indicated through input.]</p>
+<dd class="field-even"><p>[DataFrame only constisting of the two designated columns.]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>df_out ([DataFrame])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="statistical.get_distance">
+<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">get_distance</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.get_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Calculate the euclidian distance between two vectors, represented as columns in a DataFrame.]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vectors</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [DataFrame containing the two columns representing the vectors.]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[Euclidian distance of the vectors.]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>distance ([Float])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="statistical.get_values">
+<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">get_values</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.get_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Extract values from correlation matrix.]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [Correlation Matrix.]</p></li>
+<li><p><strong>exclude</strong> (<em>[</em><em>String</em><em> or </em><em>Boolean</em><em>]</em>) – [Designated parameter which is not of interest and can be dropped. Set to False to keep all.]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[np.ndarray containing the values and information about what was correlated.]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array ([np.ndarray])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="statistical.reduced">
+<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">reduced</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corr_matrix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.reduced" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Takes correlation matrix in form of DataFrame and sets lower triangular values and diagonal values to 0.]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>corr_matrix</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [Correlation matrix to be reduced.]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[Reduced correlation matrix.]</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>[DataFrame]</p>
@@ -137,17 +156,18 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="statistical.safe_values">
-<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">safe_values</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.safe_values" title="Permalink to this definition">¶</a></dt>
-<dd><p>[Extract values from correlation matrix, and save sorted or unsorted to .txt-file.]</p>
+<dt id="statistical.sort_values">
+<code class="sig-prename descclassname"><span class="pre">statistical.</span></code><code class="sig-name descname"><span class="pre">sort_values</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#statistical.sort_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Takes a np.ndarray containing N rows and 3 columns, sorts the rows by absolute value of the entry in the third column.]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> (<em>[</em><em>DataFrame</em><em>]</em>) – [Correlation Matrix.]</p></li>
-<li><p><strong>exclude</strong> (<em>[</em><em>String</em><em>]</em>) – [Variable whos correlation is to be excluded.]</p></li>
-<li><p><strong>sort</strong> (<em>[</em><em>Boolean</em><em>]</em>) – [Set to true for values to be sorted along a certain axis.]</p></li>
-<li><p><strong>path</strong> (<em>[</em><em>String</em><em>]</em>) – [Designates location to save data to.]</p></li>
-</ul>
+<dd class="field-odd"><p><strong>array_in</strong> (<em>[</em><em>np.ndarray</em><em>]</em>) – [Array containing the values of a correlation matrix.]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[Sorted array containing values of a correlation matrix.]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[np.ndarray]</p>
 </dd>
 </dl>
 </dd></dl>
